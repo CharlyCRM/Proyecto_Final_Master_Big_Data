@@ -8,13 +8,13 @@ Empiezo revisando el CSV y sus tipos de datos. Después comparo aerolíneas, reg
 
 ## Por dónde empezar
 
-Si quieres conocer el enfoque sin ejecutar código, empieza por el PDF **03 - Científico** y la **04 - Presentación**. Si prefieres seguir el análisis, los cuadernos están en [notebooks/](notebooks/):
+Para leer el planteamiento y los resultados sin ejecutar código, empieza por el PDF **03 - Científico**. El PDF **04 - Presentación** remite a un vídeo que no está incluido en este repositorio. Si prefieres seguir el análisis, los cuadernos están en [notebooks/](notebooks):
 
 - [Exploración y limpieza](notebooks/1.0-crm-initial-data-exploration.ipynb): carga con PySpark, definición del esquema y primeros resúmenes de aerolíneas y regiones.
 - [Análisis y regresión](notebooks/2.0-crm-initial-data-analitic.ipynb): estadísticas, visualizaciones y modelos que utilizan calendario, aerolínea y región.
 - [Preparación para Cassandra](notebooks/datanull.ipynb): tratamiento de valores ausentes y exportación del CSV con una columna de identificación.
 
-El archivo utilizado está en [data/](data/). Los PDF de la raíz recogen la configuración del entorno, las tareas técnicas de Cassandra y PySpark, los resultados y su presentación. `Big Data_Proyecto Final.pdf` es el enunciado académico, no una descripción de una aplicación en producción.
+El archivo utilizado está en [data/](data/). Los PDF de la raíz recogen la configuración del entorno, las tareas técnicas de Cassandra y PySpark y los resultados del estudio. El enunciado académico del centro no se redistribuye en este repositorio.
 
 ## Qué muestra el trabajo
 
@@ -38,6 +38,8 @@ Revisa antes las rutas: los cuadernos de PySpark buscan el CSV en `work/data/` y
 
 Este proyecto no tiene demo desplegada ni API pública. GitHub permite consultar los cuadernos, datos e informes, pero no ejecuta el análisis.
 
-## Autoría y materiales
+## Datos, autoría y licencia
 
-Carlos Ramírez Martín. Los informes y cuadernos corresponden a mi trabajo final; el enunciado pertenece al centro de formación. El repositorio no incluye una licencia de redistribución explícita para todo el material: su publicación no implica que los datos o documentos docentes tengan licencia MIT.
+El CSV es una copia de trabajo del conjunto [Air Traffic Passenger Statistics](https://data.sf.gov/d/rkru-6vcg), publicado por San Francisco Open Data. Recoge recuentos mensuales de pasajeros de SFO por aerolínea y otros atributos. El catálogo indica la licencia [PDDL 1.0](http://opendatacommons.org/licenses/pddl/1.0/); la versión del portal puede actualizarse respecto al archivo conservado aquí.
+
+Carlos Ramírez Martín. Los informes y cuadernos corresponden a mi proyecto final. El código y los documentos del proyecto no tienen una licencia de redistribución explícita; la licencia de los datos fuente no se extiende a esos materiales.
