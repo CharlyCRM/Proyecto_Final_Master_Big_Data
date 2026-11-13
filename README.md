@@ -6,6 +6,10 @@ Empiezo revisando el CSV y sus tipos de datos. Después comparo aerolíneas, reg
 
 [Ver el proyecto en mi portfolio](https://carlos-ramirez-martin.up.railway.app/es/projects/big-data-analysis/)
 
+![Esquema del proyecto: datos mensuales de pasajeros, análisis con PySpark y preparación para Cassandra](images/big-data-project-flow.svg)
+
+El esquema resume las tres partes del trabajo. Los registros son agregados: cada fila no representa un vuelo individual.
+
 ## Por dónde empezar
 
 Para leer el planteamiento y los resultados sin ejecutar código, empieza por el PDF **03 - Científico**. El PDF **04 - Presentación** remite a un vídeo que no está incluido en este repositorio. Si prefieres seguir el análisis, los cuadernos están en [notebooks/](notebooks):
