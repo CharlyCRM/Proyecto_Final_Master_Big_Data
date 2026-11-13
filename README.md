@@ -28,13 +28,13 @@ Es un trabajo académico, no un sistema validado para planificar rutas o anticip
 
 Una parte del ejercicio calcula correlaciones después de asignar índices numéricos a categorías. Esos índices no tienen un orden natural, así que los valores de esa matriz no deben leerse como una medida fiable de asociación entre categorías. Los cuadernos explican esta limitación junto al cálculo.
 
-También conviene revisar la cobertura de los años antes de compararlos y no atribuir un significado a `Adjusted Passenger Count` o a la categoría de precio `other` sin consultar su definición. Mantengo las salidas originales; la revisión de documentación aclara su lectura, no recalcula el análisis ni modifica los informes entregados.
+También conviene revisar la cobertura de los años antes de compararlos y no atribuir un significado a `Adjusted Passenger Count` o a la categoría de precio `other` sin consultar su definición. Los informes PDF originales se mantienen. En los cuadernos corregí la exportación del resumen y etiquetas que llamaban vuelos a los registros; retiré las salidas de esas celdas para que se regeneren al ejecutar el código. No recalculé ni modifiqué los informes entregados.
 
 ## Abrir los cuadernos
 
 Puedes leerlos directamente en GitHub. Para ejecutarlos necesitas Jupyter, Java y un entorno compatible con PySpark, además de las librerías importadas en cada cuaderno. La configuración original está descrita en el PDF **01 - Configuración**; el repositorio no incluye un entorno de dependencias fijado que garantice una instalación automática actual.
 
-Revisa antes las rutas: los cuadernos de PySpark buscan el CSV en `work/data/` y el de Cassandra conserva rutas absolutas del entorno original. Algunas celdas escriben archivos o sobrescriben exportaciones. Ejecuta sobre una copia de trabajo y adapta las rutas a tu entorno, sin apuntarlas a documentos originales que quieras conservar.
+Los cuadernos buscan el CSV en `data/` si inicias Jupyter desde la raíz del repositorio, o en `../data/` si lo inicias desde `notebooks/`. El cuaderno de exploración guarda su resumen en `work/data/resumen_exploratorio/`; el de Cassandra escribe en `/var/lib/cassandra/`, una ruta que debe existir en el contenedor o estar montada. Algunas celdas sobrescriben esos resultados, así que trabaja sobre una copia si quieres conservarlos.
 
 Este proyecto no tiene demo desplegada ni API pública. GitHub permite consultar los cuadernos, datos e informes, pero no ejecuta el análisis.
 
